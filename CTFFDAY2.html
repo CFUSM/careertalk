@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+  // Define form URLs for Day 2 sessions
+  var formURLs = [
+    'https://forms.gle/zEYfHmL2Dh339PFH7', // 11:00 - 11:30
+    'https://forms.gle/kENN5u4hS1sVTEW77', // 12:05 - 12:35
+    'https://forms.gle/eMnFofSeHDfEXzkh7', // 1:05 - 1:35
+    'https://forms.gle/oVD6zzxtFk8ydir36'  // 2:10 - 2:40
+  ];
 
+  // Get current time
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var currenttime = hours * 100 + minutes;
+
+  var redirectURL = '';
+
+  // Match time to corresponding form
+  if (currenttime >= 1045 && currenttime < 1145) {
+    redirectURL = formURLs[0];
+  } else if (currenttime >= 1145 && currenttime < 1250) {
+    redirectURL = formURLs[1];
+  } else if (currenttime >= 1250 && currenttime < 1350) {
+    redirectURL = formURLs[2];
+  } else if (currenttime >= 1350 && currenttime < 1455) {
+    redirectURL = formURLs[3];
+  } else {
+    alert("The feedback form is not available right now.");
+  }
+
+  // Redirect if a valid session is found
+  if (redirectURL) {
+    window.location.href = redirectURL;
+  }
+</script>
+</head>
+<body>
+</body>
+</html>
