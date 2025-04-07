@@ -6,12 +6,12 @@
   <script>
   // Define form URLs for each session
   var formURLs = [
-    'https://forms.gle/T9q4jDZvUdWEikuw5', // 10:00 - 10:30
-    'https://forms.gle/W4acDarcjfBpdorZA', // 11:00 - 11:30
-    'https://forms.gle/xUYjbWsb9BuMpbjo8', // 12:05 - 12:35
-    'https://forms.gle/HeabbnDDYgyafDnu6', // 1:05 - 1:35
-    'https://forms.gle/SjdUc7Y9Vzj7hgBX9', // 2:05 - 2:35
-    'https://forms.gle/V9jY6ZuL7rzTTsZs5'  // 4:00 - 4:30
+    'https://forms.gle/sfYPBj2xXxCx4g7y7', // 0900-1105
+    'https://forms.gle/2Lsn4iXYwYjoZkVd6', // 1105-1205
+    'https://forms.gle/UTCJcHpeZHHb6PHe9', // 1205-1310
+    'https://forms.gle/EzEFXscLN9TzHxja9', // 1310-1410
+    'https://forms.gle/WiTQLJghPWpZVfxV6', // 1410-1605
+    'https://forms.gle/sP65Hyg3ob58F9UB6'  // 1605-1705
   ];
 
   // Get current time
@@ -23,17 +23,17 @@
   var redirectURL = '';
 
   // Determine the correct session based on time
-  if (currenttime >= 0945 && currenttime < 1045) {
+  if (currenttime >= 0900 && currenttime < 1105) {
     redirectURL = formURLs[0];
-  } else if (currenttime >= 1045 && currenttime < 1145) {
+  } else if (currenttime >= 1105 && currenttime < 1205) {
     redirectURL = formURLs[1];
-  } else if (currenttime >= 1150 && currenttime < 1250) {
+  } else if (currenttime >= 1205 && currenttime < 1310) {
     redirectURL = formURLs[2];
-  } else if (currenttime >= 1250 && currenttime < 1350) {
+  } else if (currenttime >= 1310 && currenttime < 1410) {
     redirectURL = formURLs[3];
-  } else if (currenttime >= 1350 && currenttime < 1450) {
+  } else if (currenttime >= 1410 && currenttime < 1605) {
     redirectURL = formURLs[4];
-  } else if (currenttime >= 1450 && currenttime < 1645) {
+  } else if (currenttime >= 1605 && currenttime < 1705) {
     redirectURL = formURLs[5];
   } else {
     alert("The feedback form is not available right now.");
