@@ -23,17 +23,17 @@
   var redirectURL = '';
 
   // Determine the correct session based on time
-  if (currenttime >= 0945 && currenttime < 1045) {
+  if (currenttime >= 0900 && currenttime < 1035) {
     redirectURL = formURLs[0];
-  } else if (currenttime >= 1045 && currenttime < 1145) {
+  } else if (currenttime >= 1035 && currenttime < 1135) {
     redirectURL = formURLs[1];
-  } else if (currenttime >= 1150 && currenttime < 1250) {
+  } else if (currenttime >= 1135 && currenttime < 1240) {
     redirectURL = formURLs[2];
-  } else if (currenttime >= 1250 && currenttime < 1350) {
+  } else if (currenttime >= 1240 && currenttime < 1340) {
     redirectURL = formURLs[3];
-  } else if (currenttime >= 1350 && currenttime < 1450) {
+  } else if (currenttime >= 1340 && currenttime < 1440) {
     redirectURL = formURLs[4];
-  } else if (currenttime >= 1450 && currenttime < 1645) {
+  } else if (currenttime >= 1440 && currenttime < 1635) {
     redirectURL = formURLs[5];
   } else {
     alert("The feedback form is not available right now.");
