@@ -4,17 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
-  // Define form URLs for each session
+  // Define form URLs for Day 2 sessions
   var formURLs = [
-    'https://forms.gle/T9q4jDZvUdWEikuw5', // 10:00 - 10:30
-    'https://forms.gle/W4acDarcjfBpdorZA', // 11:00 - 11:30
-    'https://forms.gle/xUYjbWsb9BuMpbjo8', // 12:05 - 12:35
-    'https://forms.gle/HeabbnDDYgyafDnu6', // 1:05 - 1:35
-    'https://forms.gle/SjdUc7Y9Vzj7hgBX9', // 2:05 - 2:35
-    'https://forms.gle/V9jY6ZuL7rzTTsZs5'  // 4:00 - 4:30
+    'https://forms.gle/ZDsaPgarqC2w2NqYA', // 10:00 - 10:30
+    'https://forms.gle/zEYfHmL2Dh339PFH7', // 11:00 - 11:30
+    'https://forms.gle/kENN5u4hS1sVTEW77', // 12:05 - 12:35
+    'https://forms.gle/eMmFofSeHdFfXzkh7', // 1:05 - 1:35
+    'https://forms.gle/oVD6zzxtFk8ydir36'  // 2:10 - 2:40
   ];
 
-  // Get current time
   var now = new Date();
   var hours = now.getHours();
   var minutes = now.getMinutes();
@@ -22,24 +20,21 @@
 
   var redirectURL = '';
 
-  // Determine the correct session based on time
-  if (currenttime >= 0900 && currenttime < 1035) {
-    redirectURL = formURLs[0];
-  } else if (currenttime >= 1035 && currenttime < 1135) {
-    redirectURL = formURLs[1];
-  } else if (currenttime >= 1135 && currenttime < 1240) {
-    redirectURL = formURLs[2];
-  } else if (currenttime >= 1240 && currenttime < 1340) {
-    redirectURL = formURLs[3];
-  } else if (currenttime >= 1340 && currenttime < 1450) {
-    redirectURL = formURLs[4];
-  } else if (currenttime >= 1450 && currenttime < 1635) {
-    redirectURL = formURLs[5];
+  // Match time to corresponding form
+  if (currenttime >= 0900 && currenttime < 1050) {
+    redirectURL = formURLs[0]; // 10:00 - 10:30
+  } else if (currenttime >= 1050 && currenttime < 1150) {
+    redirectURL = formURLs[1]; // 11:00 - 11:30
+  } else if (currenttime >= 1150 && currenttime < 1255) {
+    redirectURL = formURLs[2]; // 12:05 - 12:35
+  } else if (currenttime >= 1255 && currenttime < 1355) {
+    redirectURL = formURLs[3]; // 1:05 - 1:35
+  } else if (currenttime >= 1355 && currenttime < 1500) {
+    redirectURL = formURLs[4]; // 2:10 - 2:40
   } else {
     alert("The feedback form is not available right now.");
   }
 
-  // Redirect if a valid session is found
   if (redirectURL) {
     window.location.href = redirectURL;
   }
@@ -48,3 +43,5 @@
 <body>
 </body>
 </html>
+
+
